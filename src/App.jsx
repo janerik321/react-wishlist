@@ -11,7 +11,7 @@ const Backdrop = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  margin-top: 1rem;
   gap: 2rem;
   color: #fffd;
 `;

@@ -88,7 +88,6 @@ const NaughtyCard = styled.div`
   width: 400px;
   display: flex;
   justify-content: space-between;
-  // gap: 4rem;
   background-color: #b22;
   font-family: "Gochi Hand";
   color: #fffd;
@@ -110,13 +109,17 @@ const NaughtyCard = styled.div`
 
   @keyframes snow {
     0% {
-      box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 5px 10px -3px #0009, 0px 0px 0px 0px white;
+      box-shadow: 0px 4px 4px inset #0005, 0px -2px 3px inset #0005, 0px 0px 0px 0px white;
     }
     100% {
-      box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 5px 10px -3px #0009, 0px -15px 0px 0px white;
+      box-shadow: 0px 4px 4px inset #0005, 0px -2px 3px inset #0005, 0px -15px 0px 0px white;
     }
+
+    }
+    @media screen and (max-width: 450px) {
+  flex-direction: column;
+  max-width: 300px;
+  gap: 1rem;
 `;
 
 const CardHalves = styled.div`
