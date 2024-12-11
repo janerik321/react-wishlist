@@ -14,8 +14,7 @@ const NiceCard = styled.div`
   border: 5px solid #fc1;
   outline: 4px solid #fe1;
   border-radius: 15px;
-  box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 5px 10px -3px #0009, 0px -4px 0px 4px white;
+
   h4 {
     margin-bottom: 0.5rem;
   }
@@ -25,22 +24,33 @@ const NiceCard = styled.div`
 
   overflow: hidden;
 
-  animation-name: shine2;
-  animation-duration: 4000ms;
-  animation-iteration-count: infinite;
+  animation-name: shine2, snow2;
+  animation-duration: 4s, 90s;
+  animation-iteration-count: infinite, 1;
+  animation-fill-mode: none, forwards;
 
   @keyframes shine2 {
     0% {
       background: #c22;
     }
-    21% {
+    7% {
       background: #c22;
     }
-    25% {
+    12% {
       background: #f77;
     }
-    27.5% {
+    17% {
       background: #c22;
+    }
+  }
+  @keyframes snow2 {
+    0% {
+      box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
+        0px 5px 10px -3px #0009, 0px 0px 0px 4px white;
+    }
+    100% {
+      box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
+        0px 5px 10px -3px #0009, 0px -15px 0px 4px white;
     }
   }
 `;
@@ -86,8 +96,7 @@ const NaughtyCard = styled.div`
   margin: 1rem;
   border: 5px dotted #4a4;
   border-radius: 15px;
-  box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 5px 10px -3px #0009, 0px -4px white;
+  
   h4 {
     // font-weight: 500;
     margin-bottom: 0.5rem;
@@ -95,6 +104,19 @@ const NaughtyCard = styled.div`
   ul {
     padding-left: 1rem;
   }
+  animation-name: snow;
+  animation-duration: 90s;
+  animation-fill-mode: forwards;
+
+  @keyframes snow {
+    0% {
+      box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
+    0px 5px 10px -3px #0009, 0px 0px 0px 0px white;
+    }
+    100% {
+      box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
+    0px 5px 10px -3px #0009, 0px -15px 0px 0px white;
+    }
 `;
 
 const CardHalves = styled.div`

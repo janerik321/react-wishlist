@@ -10,25 +10,19 @@
 }
 
 body {
-  /* width: 100vw; */
+  background: linear-gradient(to bottom, #002, #114);
+  background-attachment: fixed;
 }
 
 body > * {
   width: 100%;
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 h1 {
   text-align: center;
   color: #fffd;
-  background-color: #114;
-  /* animation-fill-mode: forwards;
-  animation-direction: alternate;
-  animation-play-state: paused;
-  animation-delay: 0ms;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
-  position: absolute; */
+  margin: 1rem;
 }
