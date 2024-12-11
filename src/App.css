@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Gochi Hand";
+}
+
+:root {
+  font-size: 18px;
 }
 
 body {
@@ -19,4 +24,11 @@ h1 {
   text-align: center;
   color: #fffd;
   background-color: #114;
+  /* animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-play-state: paused;
+  animation-delay: 0ms;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+  position: absolute; */
 }

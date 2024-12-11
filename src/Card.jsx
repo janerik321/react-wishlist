@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 const NiceCard = styled.div`
+  position: relative;
   width: 400px;
   display: flex;
   justify-content: center;
   // gap: 4rem;
   background: #c22;
+  font-family: "Gochi Hand";
   color: #fffd;
   padding: 2rem 2.5rem;
   margin: 1rem;
@@ -13,7 +15,7 @@ const NiceCard = styled.div`
   outline: 4px solid #fe1;
   border-radius: 15px;
   box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 5px 10px -3px #0009;
+    0px 5px 10px -3px #0009, 0px -4px 0px 4px white;
   h4 {
     margin-bottom: 0.5rem;
   }
@@ -22,36 +24,54 @@ const NiceCard = styled.div`
   }
 
   overflow: hidden;
+
+  animation-name: shine2;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+
+  @keyframes shine2 {
+    0% {
+      background: #c22;
+    }
+    21% {
+      background: #c22;
+    }
+    25% {
+      background: #f77;
+    }
+    27.5% {
+      background: #c22;
+    }
+  }
 `;
 
 const Shine = styled.div`
-  // position: absolute;
-  // width: 400px;
-  // height: 30px;
-  // background-color: white;
-  // rotate: 45deg;
-  // left: 0px;
-  // // bottom: 0px;
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+  top: -30px;
 
-  // animation-name: shine;
-  // animation-duration: 5000ms;
-  // animation-iteration-count: infinite;
-  // // animation-delay: 2000ms;
-  // // animation-fill-mode: backwards;
-  // animation-timing-function: ease-in-out;
+  animation-name: shine;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  // animation-delay: 2000ms;
+  // animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
 
-  // @keyframes shine {
-  //   0% {
-  //     left: 0px;
-  //     bottom: 10px;
-  //   }
-  //   50% {
-  //     left: -10px;
-  //     bottom: 0px;
-  //     background-color: green;
-  //   }
-  // }
-  // // z-index: 1;
+  @keyframes shine {
+    0% {
+      left: -270px;
+    }
+    20% {
+      left: 400px;
+    }
+    100% {
+      left: 400px;
+    }
+  }
 `;
 
 const NaughtyCard = styled.div`
@@ -59,15 +79,17 @@ const NaughtyCard = styled.div`
   display: flex;
   justify-content: space-between;
   // gap: 4rem;
-  background-color: #c22;
+  background-color: #b22;
+  font-family: "Gochi Hand";
   color: #fffd;
   padding: 2rem 2.5rem;
   margin: 1rem;
-  border: 5px solid #4a4;
+  border: 5px dotted #4a4;
   border-radius: 15px;
   box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 5px 10px -3px #0009;
+    0px 5px 10px -3px #0009, 0px -4px white;
   h4 {
+    // font-weight: 500;
     margin-bottom: 0.5rem;
   }
   ul {
@@ -77,6 +99,7 @@ const NaughtyCard = styled.div`
 
 const CardHalves = styled.div`
   width: 50%;
+  // padding: 0 2rem;
 `;
 
 const NameAge = styled.div;
