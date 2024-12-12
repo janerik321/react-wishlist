@@ -62,7 +62,7 @@ Error generating stack: `+i.message+`
   ul {
     padding-left: 1rem;
   }
-  // animation-name: snow;
+  animation-name: snow;
   animation-duration: 90s;
   animation-fill-mode: forwards;
 
@@ -114,7 +114,7 @@ Error generating stack: `+i.message+`
 
   overflow: hidden;
 
-  animation-name: shine2; //snow2;
+  animation-name: shine2, snow2;
   animation-duration: 4s, 90s;
   animation-iteration-count: infinite, 1;
   animation-fill-mode: none, forwards;
