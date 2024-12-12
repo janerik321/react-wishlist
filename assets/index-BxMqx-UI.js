@@ -52,6 +52,8 @@ Error generating stack: `+i.message+`
   border: 5px solid #fc1;
   outline: 4px solid #fe1;
   border-radius: 15px;
+   box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
+        0px 5px 10px -3px #0009, 0px -12px 0px 4px white;
 
   h4 {
     margin-bottom: 0.5rem;
@@ -62,7 +64,7 @@ Error generating stack: `+i.message+`
 
   overflow: hidden;
 
-  animation-name: shine2, snow2;
+  animation-name: shine2, //snow2;
   animation-duration: 4s, 90s;
   animation-iteration-count: infinite, 1;
   animation-fill-mode: none, forwards;
@@ -122,7 +124,6 @@ Error generating stack: `+i.message+`
   width: 400px;
   display: flex;
   justify-content: space-between;
-  // gap: 4rem;
   background-color: #b22;
   font-family: "Gochi Hand";
   color: #fffd;
@@ -130,6 +131,7 @@ Error generating stack: `+i.message+`
   margin: 1rem;
   border: 5px dotted #4a4;
   border-radius: 15px;
+  box-shadow: 0px 4px 4px inset #0005, 0px -2px 3px inset #0005, 0px -12px 0px 0px white;
   
   h4 {
     // font-weight: 500;
@@ -138,19 +140,23 @@ Error generating stack: `+i.message+`
   ul {
     padding-left: 1rem;
   }
-  animation-name: snow;
+  // animation-name: snow;
   animation-duration: 90s;
   animation-fill-mode: forwards;
 
   @keyframes snow {
     0% {
-      box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 5px 10px -3px #0009, 0px 0px 0px 0px white;
+      box-shadow: 0px 4px 4px inset #0005, 0px -2px 3px inset #0005, 0px 0px 0px 0px white;
     }
     100% {
-      box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 5px 10px -3px #0009, 0px -15px 0px 0px white;
+      box-shadow: 0px 4px 4px inset #0005, 0px -2px 3px inset #0005, 0px -15px 0px 0px white;
     }
+
+    }
+    @media screen and (max-width: 450px) {
+  flex-direction: column;
+  max-width: 300px;
+  gap: 1rem;
 `,ui=Cn.div`
   width: 50%;
   // padding: 0 2rem;
@@ -160,7 +166,7 @@ Error generating stack: `+i.message+`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  margin-top: 1rem;
   gap: 2rem;
   color: #fffd;
 `;function Vh(){return(async()=>(await loadSnowPreset(tsParticles),await tsParticles.load({id:"tsparticles",options:{preset:"snow",background:{opacity:0},fullScreen:{zIndex:-1},particles:{size:{value:{min:1,max:2.5}},opacity:{value:{min:.1,max:1}}}}})))(),pe.jsxs(pe.Fragment,{children:[pe.jsx("h1",{children:"Ønskelister"}),pe.jsx(Bh,{children:Uh.map(({id:o,name:a,age:s,wishlist:p,naughty:g})=>pe.jsx(pe.Fragment,{children:$h(o,a,s,p,g)}))})]})}Op.createRoot(document.getElementById("root")).render(pe.jsx(Vh,{}));
