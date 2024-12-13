@@ -50,7 +50,7 @@ Error generating stack: `+i.message+`
   border: 7px dotted #4a4;
   border-radius: 15px;
   box-shadow: 0px 4px 4px inset #0005, 0px -2px 3px inset #0005,
-    0px -4px 6px #0005, 0px -12px 0px 0px white, 0px -4px 0px 0px white inset;
+    0px -4px 6px #0005, 0px -15px 0px 0px white, 0px -5px 0px 0px white inset;
 
   h4 {
     margin-bottom: 0.5rem;
@@ -69,8 +69,8 @@ Error generating stack: `+i.message+`
     }
     100% {
       box-shadow: 0px 4px 4px inset #0005, 0px -2px 3px inset #0005,
-        0px -4px 6px #0005, 0px -12px 0px 0px white,
-        0px -4px 0px 0px white inset;
+        0px -4px 6px #0005, 0px -15px 0px 0px white,
+        0px -5px 0px 0px white inset;
     }
   }
   @media screen and (max-width: 450px) {
@@ -102,8 +102,8 @@ Error generating stack: `+i.message+`
   outline: 4px solid #fe1;
   border-radius: 15px;
   box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-    0px 0px 6px 4px #0005, 0px 5px 10px -3px #0009, 0px -12px 0px 4px white,
-    0px -4px 0px 0px white inset;
+    0px 0px 6px 4px #0005, 0px 5px 10px -3px #0009, 0px -15px 0px 4px white,
+    0px -5px 0px 0px white inset;
 
   h4 {
     margin-bottom: 0.5rem;
@@ -141,8 +141,8 @@ Error generating stack: `+i.message+`
     }
     100% {
       box-shadow: 0px 3px 4px inset #0005, 0px -1px 3px inset #0005,
-        0px 0px 6px 4px #0005, 0px 5px 10px -3px #0009, 0px -12px 0px 4px white,
-        0px -4px 0px 0px white inset;
+        0px 0px 6px 4px #0005, 0px 5px 10px -3px #0009, 0px -15px 0px 4px white,
+        0px -5px 0px 0px white inset;
     }
   }
   @media screen and (max-width: 450px) {
@@ -156,12 +156,14 @@ Error generating stack: `+i.message+`
   }
 `,Bh=ht.div`
   position: absolute;
-  width: 100%;
-  height: 30px;
+  width: 30px;
+  height: 100%;
   background-color: white;
-  transform-origin: bottom left;
-  transform: rotate(45deg);
-  top: -30px;
+  transform-origin: bottom;
+  transform: skew(45deg);
+  top: 0;
+  left: 600px;
+  //   left: calc(400px + height: 100%);
 
   animation-name: shine;
   animation-duration: 4000ms;
@@ -170,17 +172,13 @@ Error generating stack: `+i.message+`
 
   @keyframes shine {
     0% {
-      left: -270px;
+      left: -30px;
     }
     20% {
-      left: 400px;
-    }
-    100% {
-      left: 400px;
-    }
+      left: 600px;
+    
   }
   @media screen and (max-width: 450px) {
-    // width: 550px;
     animation: none;
     display: none;
   }
