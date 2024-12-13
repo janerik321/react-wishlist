@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Card from "./Card.jsx";
 import kidsWishlist from "./kidsWishlist.js";
 
+const CardContainer = styled.div``;
+
 const Backdrop = styled.div`
   max-width: 1000px;
   display: flex;
@@ -12,7 +14,7 @@ const Backdrop = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
-  gap: 4rem;
+  gap: 5rem;
   color: #fffd;
 `;
 
@@ -28,9 +30,12 @@ function App() {
           opacity: 0,
         },
         fullScreen: {
-          zIndex: -1,
+          // zIndex: -1,
         },
         particles: {
+          // number: {
+          //   value: 10,
+          // },
           size: {
             value: {
               min: 1,
@@ -52,7 +57,11 @@ function App() {
       <h1>Ønskelister</h1>
       <Backdrop>
         {kidsWishlist.map(({ id, name, age, wishlist, naughty }) => {
-          return <>{Card(id, name, age, wishlist, naughty)}</>;
+          return (
+            <CardContainer key={id}>
+              {Card(id, name, age, wishlist, naughty)}
+            </CardContainer>
+          );
         })}
       </Backdrop>
     </>

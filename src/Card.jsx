@@ -1,9 +1,15 @@
 import styled from "styled-components";
 import { NaughtyCard, NaughtyBottomRightImage } from "./NaughtyCard";
-import { NiceCard, Shine, NiceBottomRightImage, niceImages } from "./NiceCard";
+import { NiceCard, Shine, BottomRightNiceImage } from "./NiceCard";
+import cornerIcons from "./CornerIcons";
 
 const CardParent = styled.div`
   position: relative;
+`;
+
+const ChristmasDecorations = styled.img`
+  height: 20px;
+  z-index: 1;
 `;
 
 const List = styled.div`
@@ -22,11 +28,12 @@ const NameAge = styled.div`
 `;
 
 export default function Card(id, name, age, wishlist, naughty) {
+  const randomImage = Math.floor(Math.random() * cornerIcons.length);
   if (!naughty) {
-    const randomImage = Math.floor(Math.random() * niceImages.length);
     return (
       <>
         <CardParent>
+          {/* <ChristmasDecorations src="images/vecteezy_wide-christmas-border-garland-fromf-fir-branches-balls_.png" /> */}
           <NiceCard>
             <Shine />
             <NameAge>
@@ -42,8 +49,8 @@ export default function Card(id, name, age, wishlist, naughty) {
               </ul>
             </List>
           </NiceCard>
-          <NiceBottomRightImage
-            src={`images/${niceImages[randomImage]}`}
+          <BottomRightNiceImage
+            src={`images/${cornerIcons[randomImage]}`}
             alt="A christmas decoration icon"
           />
         </CardParent>
@@ -66,7 +73,7 @@ export default function Card(id, name, age, wishlist, naughty) {
             </ul>
           </List>
           <NaughtyBottomRightImage
-            src="images/coal-svgrepo-com.svg"
+            src={`images/${cornerIcons[randomImage]}`}
             alt="A coal icon"
           />
         </NaughtyCard>
