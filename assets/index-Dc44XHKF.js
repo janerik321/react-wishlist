@@ -181,7 +181,8 @@ Error generating stack: `+i.message+`
   }
   @media screen and (max-width: 450px) {
     // width: 550px;
-    animtion: none;
+    animation: none;
+    display: none;
   }
 `,Vh=ht.img`
   position: absolute;
