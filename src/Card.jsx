@@ -7,11 +7,6 @@ const CardParent = styled.div`
   position: relative;
 `;
 
-const ChristmasDecorations = styled.img`
-  height: 20px;
-  z-index: 1;
-`;
-
 const List = styled.div`
   width: 60%;
   // padding: 0 2rem;
@@ -27,13 +22,21 @@ const NameAge = styled.div`
   }
 `;
 
+const CornerPine = styled.img`
+  width: 150px;
+  position: absolute;
+  transform: scaleX(-1);
+  left: -1.8rem;
+  bottom: -1.4rem;
+  // filter: drop-shadow(0px -1px);
+`;
+
 export default function Card(id, name, age, wishlist, naughty) {
   const randomImage = Math.floor(Math.random() * cornerIcons.length);
   if (!naughty) {
     return (
       <>
         <CardParent>
-          {/* <ChristmasDecorations src="images/vecteezy_wide-christmas-border-garland-fromf-fir-branches-balls_.png" /> */}
           <NiceCard>
             <Shine />
             <NameAge>
@@ -49,6 +52,7 @@ export default function Card(id, name, age, wishlist, naughty) {
               </ul>
             </List>
           </NiceCard>
+          <CornerPine src="images/[CITYPNG.COM]HD Holidays Christmas Garland Pine Branch Corner PNG - 200x200.png" />
           <BottomRightNiceImage
             src={`images/${cornerIcons[randomImage]}`}
             alt="A christmas decoration icon"
@@ -60,6 +64,7 @@ export default function Card(id, name, age, wishlist, naughty) {
     return (
       <>
         <NaughtyCard>
+          <CornerPine src="images/[CITYPNG.COM]HD Holidays Christmas Garland Pine Branch Corner PNG - 200x200.png" />
           <NameAge>
             <h2>{name}</h2>
             <h3>{age} år</h3>

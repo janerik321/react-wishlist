@@ -18,6 +18,20 @@ const Backdrop = styled.div`
   color: #fffd;
 `;
 
+const CornerPineLeft = styled.img`
+  width: 25%;
+  position: fixed;
+  transform: scaleX(-1);
+  bottom: 0px;
+  left: 0px;
+`;
+const CornerPineRight = styled.img`
+  width: 25%;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+`;
+
 function App() {
   (async () => {
     await loadSnowPreset(tsParticles);
@@ -64,6 +78,8 @@ function App() {
           );
         })}
       </Backdrop>
+      {/* <CornerPineLeft src="images/[CITYPNG.COM]HD Holidays Christmas Garland Pine Branch Corner PNG - 1000x1000.png" />
+      <CornerPineRight src="images/[CITYPNG.COM]HD Holidays Christmas Garland Pine Branch Corner PNG - 1000x1000.png" /> */}
     </>
   );
 }
